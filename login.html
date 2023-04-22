@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test Login</title>
+    
+</head>
+
+<body>
+    <form action="#">
+    <div class="tela-login">
+        <h3>Login</h3>
+        <input type="text" placeholder="login" id="login">
+        <input type="password" placeholder="senha" id="senha">
+
+     <input class="submit" type="submit"
+     value="Entrar" onclick="logar(); return false">;
+        
+
+     </div>
+     </form>
+
+    <script>
+        function logar(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+
+            if(login == 'projeto' && senha == '123456'){
+                alert("sucesso");
+                location.href = "pgn1.html";
+            }else{
+                alert("usuário ou senha inválidos");
+            }
+        }
+
+        document.addEventListener("keypress", function(e) {
+            
+            if(e.key === 'Enter') {
+
+                var btn =
+                document.querySelector("#submit");
+
+                btn.click();
+
+            }
+
+        })
+    </script>
+</body>
+</html>
